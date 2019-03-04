@@ -1,6 +1,10 @@
 OpenVPN Update resolvconf
 -------------------------
 
+### My changes! Please read before start!
+
+My changes make it just work with centos 7! But it should also work with os, which has a normal resolv.conf file placed in /etc/resolv.conf. Not the best solution but it works.
+
 ### Description
 
 This is a script to update your /etc/resolv.conf with DNS settings that
