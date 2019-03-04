@@ -56,11 +56,10 @@ up)
     R="${R}nameserver $NS
 "
   done
-  #echo -n "$R" | $RESOLVCONF -x -p -a "${dev}"
-  echo -n "$R" | $RESOLVCONF -x -a "${dev}.inet"
+  mv /etc/resolv.conf /etc/resolv.conf.bak && touch /etc/resolve.conf && echo -n "$R" > $RESOLVCONF
   ;;
 down)
-  $RESOLVCONF -d "${dev}.inet"
+  rm /etc/resolv.conf && mv /etc/resolv.conf.bak /etc/resolv.conf
   ;;
 esac
 
