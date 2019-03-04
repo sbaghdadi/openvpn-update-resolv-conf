@@ -22,7 +22,7 @@
 ## manually if it still doesn't work, i.e.
 ## RESOLVCONF=/usr/sbin/resolvconf
 export PATH=$PATH:/sbin:/usr/sbin:/bin:/usr/bin
-RESOLVCONF=$(type -p resolvconf)
+RESOLVCONF=/etc/resolv.conf
 
 case $script_type in
 
